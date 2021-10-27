@@ -11,6 +11,10 @@ public class Aircrafts {
     private String manufacturer;
     @SerializedName("manufacturingYear")
     private String manufacturingYear;
+    @SerializedName("value")
+    private String value;
+    @SerializedName("message")
+    private String massage;
 
     public int getId() {
         return id;
@@ -42,5 +46,21 @@ public class Aircrafts {
 
     public void setManufacturingYear(String manufacturingYear) {
         this.manufacturingYear = manufacturingYear;
+    }
+
+    public String getValue() {
+        return value;
+    }
+
+    public void setValue(String value) {
+        this.value = value;
+    }
+
+    public String getMassage() {
+        return massage;
+    }
+
+    public void setMassage(String massage) {
+        this.massage = massage;
     }
 }

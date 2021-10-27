@@ -60,10 +60,7 @@ public class EditorActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editor);
 
-        ActionBar actionBar = getSupportActionBar();
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
+
 
         mName = findViewById(R.id.name);
         mManufacturer = findViewById(R.id.manufacturer);
@@ -94,14 +91,12 @@ public class EditorActivity extends Activity {
         if (id != 0) {
 
             readMode();
-            getSupportActionBar().setTitle("Edit " + name);
 
             mName.setText(name);
             mManufacturer.setText(manufacturer);
             mManufacturingYear.setText(manufacturingYear);
 
         } else {
-            getSupportActionBar().setTitle("Add a Pet");
         }
     }
 

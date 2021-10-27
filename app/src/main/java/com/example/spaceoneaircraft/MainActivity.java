@@ -28,7 +28,6 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private RecyclerView.LayoutManager layoutManager;
     private Adapter adapter;
     private List<Aircrafts> aircraftsList;
     ApiInterface apiInterface;
@@ -45,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progress);
         recyclerView = findViewById(R.id.recyclerView);
 
-        layoutManager = new LinearLayoutManager(this);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
 
         listener = new Adapter.RecyclerViewClickListener() {

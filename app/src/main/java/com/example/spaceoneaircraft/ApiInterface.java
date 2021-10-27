@@ -14,28 +14,47 @@ public interface ApiInterface {
     @GET("/api/scope/chris/items/aircraft")
     Call<List<Aircrafts>> getAircraft();
 
+//    @FormUrlEncoded
+//    @POST("/api/scope/chris/items/aircraft")
+//    Call<Aircrafts> insertAircraft(
+//            @Field("key") String key,
+//            @Field("name") String name,
+//            @Field("manufacturer") String manufacturer,
+//            @Field("manufacturingYear") String manufacturingYear;
+
+//    @FormUrlEncoded
+//    @PUT("/api/scope/chris/item/{id}")
+//    Call<Aircrafts> updateAircraft(
+//            @Field("key") String key,
+//            @Field("id") int id,
+//            @Field("name") String name,
+//            @Field("manufacturer") String manufacturer,
+//            @Field("manufacturingYear") String manufacturingYear;
+
+//    @FormUrlEncoded
+//    @DELETE("/api/scope/chris/item/{id}")
+//    Call<Aircrafts> deleteAircraft(
+//            @Field("key") String key,
+//            @Field("id") int id;
+//
+//
+//
+//    @FormUrlEncoded
+//    @DELETE("/api/scope/chris/item/id")
+//    Call<Aircrafts> deleteAircraft(String key, @Field("id") int id);
+
+
     @FormUrlEncoded
     @POST("/api/scope/chris/items/aircraft")
-    Call<Aircrafts> insertAircraft(
-            @Field("key") String key,
-            @Field("name") String name,
-            @Field("manufacturer") String manufacturer,
-            @Field("manufacturingYear") String manufacturingYear;
+    Call<Aircrafts> insertAircraft(String key, String name, String manufacturer, String manufacturingYear);
 
     @FormUrlEncoded
-    @PUT("/api/scope/chris/item/{id}")
-    Call<Aircrafts> updateAircraft(
-            @Field("key") String key,
-            @Field("id") int id,
-            @Field("name") String name,
-            @Field("manufacturer") String manufacturer,
-            @Field("manufacturingYear") String manufacturingYear;
+    @PUT("/api/scope/chris/item/id")
+    Call<Aircrafts> updateAircraft(String key, @Field("id") int id, String name, String manufacturer, String manufacturingYear);
 
     @FormUrlEncoded
-    @DELETE("/api/scope/chris/item/{id}")
-    Call<Aircrafts> deleteAircraft(
-            @Field("key") String key,
-            @Field("id") int id;
+    @DELETE("/api/scope/chris/item/id")
+    Call<Aircrafts> deleteAircraft(String key, @Field("id") int id);
 
     void insertAircraft();
 }
